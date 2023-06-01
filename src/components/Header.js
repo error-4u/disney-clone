@@ -67,7 +67,7 @@ a{
     align-items: center;
     padding:0 12px;
     cursor:pointer;
-}
+
 a:hover{
     filter: brightnesss(70%);
 }
@@ -77,6 +77,30 @@ img{
 span{
     font-size: 13px;
     letter-spacing: 1.42px;
+    position:relative;
+
+    &:after {
+        content: "";
+        height: 2px;
+        position: absolute;
+        background:white;
+        left:0;
+        right:0;
+        bottom: -6px;
+        opacity: 0;
+        transform-origin: left center;
+        transform: scaleX();
+
+    }
+
+  
+}
+ &:hover{
+    span:after{
+        tranform:scaleX(1);
+        opacity: 1;
+    }
+ }   
 }
 `
 const UserImg = styled.img`
