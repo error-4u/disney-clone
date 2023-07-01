@@ -6,7 +6,7 @@ import ImgSlider from "./ImgSlider"
 function Home() {
   return (
    <Container>
-      home
+      <ImgSlider />
       </Container>
   )
 }
